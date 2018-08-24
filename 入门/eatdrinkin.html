@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eatdrinkinc.com</title>
+  <link rel="apple-touch-icon" href="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/apple-icon-touch.png">
+  <link rel="icon" href="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/favicon.ico">
+   <style type="text/css">
+   *{
+   	margin: 0;
+   	padding: 0;
+   	list-style-type: none;
+   	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+   }
+
+/*
+
+a, a:visited {
+  color: #ac3a6b;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s 0s ease-in-out;
+   }
+
+  a:hover, a:focus, a:visited:hover, a:visited:focus {
+    color: #8a2e56; }
+ 
+  a:link, a:visited:link {
+ 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); 
+}
+
+*/
+/*
+左半部分样式
+ */
+   #header{
+   	background: #ffffff;
+    float: left;
+    padding: 0 20px;
+    width: 18%;
+    height: 100%;
+
+   }
+
+   #leftbox{
+   	display: block;
+    margin-top: 15%;
+    position: relative;
+    display: block;
+   }
+  
+   #leftbox ul{
+  	display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+    #leftbox li{
+    position: relative;
+  }
+
+    #leftbox img{
+  	        max-width: 100%;
+            margin: 0 auto;
+           padding: 4% 25%;
+           display: block;
+           }
+
+    #leftbox ul li img:hover, #leftbox ul li img:focus {
+            opacity: .5;
+            -webkit-transition: opacity .1s ;
+            /*Safa 和Chrome*/
+            -moz-transition: opacity .1s ;/* 火狐*/
+            -o-transition: opacity .1s ;/*Opera*/
+            transition: opacity .1s 1; 
+        }
+
+    #leftbox ul li.divider img {
+
+        opacity: 1 ;
+         }
+
+    #landing-footer {
+      color: #666;
+    font-size: 10px;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 15px;
+  
+}
+
+/*
+图片部分
+ */
+
+#section-home {
+    display: block;
+    margin-left: 18%; }
+
+.inner {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+  .row {
+    display: block;
+    height: 50%;
+    width: 100%;
+    overflow: hidden; }
+
+  .image-wrap {
+    float: left;
+    max-height: 350px;
+    overflow: hidden;
+    position: relative;
+    /* max-width: 1000px; */
+    -webkit-transition: max-width .2s ease-out;
+    /* Saf3.2+, Chrome */
+    -moz-transition: max-width .2s ease-out;
+    /* FF4+ */
+    -ms-transition: max-width .2s ease-out;
+    /* IE10? */
+    -o-transition: max-width 2s ease-out;
+    /* Opera 10.5+ */
+    transition: max-width .2s ease-out; }
+    .image-wrap img.tile {
+      width: 100%;
+      -webkit-transition: margin-top .2s ease-out;
+      /* Saf3.2+, Chrome */
+      -moz-transition: margin-top .2s ease-out;
+      /* FF4+ */
+      -ms-transition: margin-top .2s ease-out;
+      /* IE10? */
+      -o-transition: margin-top .2s ease-out;
+      /* Opera 10.5+ */
+      transition: margin-top .2s ease-out; }
+
+  #r1c1 {
+    width: 50%; }
+
+  #r1c2 {
+    width: 25%; }
+
+  #r1c3 {
+    width: 25%; }
+
+  #r2c1 {
+    width: 33.3%; }
+
+  #r2c2 {
+    width: 33.3%; }
+
+  #r2c3 {
+    width: 33.4%; }
+
+    .slidehover {
+    background: url(images/bg_tr.png) repeat;
+    color: #fff;
+    position: absolute;
+    left: -600px;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+}
+    
+    .slidehover img {
+      display: block;
+      max-width: 50%;
+      height: auto;
+      margin: 0 auto;
+      position: relative;
+      top: 20%; 
+  }
+    .slidehover img.shop_logo {
+      top: 45%; }
+    .slidehover img.tacorico {
+      top: 35%; }
+    .slidehover img.cut_logo {
+      top: 35%; }
+    .slidehover img.eatdrinkden {
+      top: 35%; }
+
+</style>
+<script type="text/javascript">
+ window.onload = function(){
+  var dish = document.getElementById('dish');
+  var r1c1 = document.getElementById('r1c1');
+  var  dtr = document.getElementById('dish_trigger')
+
+   var shop = document.getElementById('shop');
+  var r1c2 = document.getElementById('r1c2');
+  var  str = document.getElementById('shop_trigger')
+
+   var tac = document.getElementById('tacorico');
+  var r1c3 = document.getElementById('r1c3');
+  var  ttr = document.getElementById('tacorico_trigger')
+
+   var eat = document.getElementById('eat_drink');
+  var r2c1 = document.getElementById('r2c1');
+  var  edtr = document.getElementById('eat_drink_trigger')
+
+   var cut = document.getElementById('cut');
+  var r2c2 = document.getElementById('r2c2');
+  var  ctr = document.getElementById('cut_trigger')
+
+   var den = document.getElementById('eatdrink_den');
+  var r2c3 = document.getElementById('r2c3');
+  var eddtr = document.getElementById('eat_drink_denver_trigger')
+
+/*
+1
+ */  
+  dtr.onmouseover = function(){
+    dishMove(0);
+  }
+  dtr.onmouseout = function(){
+    dishMove(-600);
+  }
+
+  r1c1.onmouseover = function(){
+    dishMove(0);
+  }
+  r1c1.onmouseout = function(){
+    dishMove(-600);
+  }
+
+  var timer1 = null;
+  function dishMove(iTarget){
+    clearInterval(timer1);
+     timer1 = setInterval(function(){
+      var speed = 0;
+      if(dish.offsetLeft > iTarget){
+        speed = -10;
+      }
+      else{
+        speed = 10;
+      }
+      if (dish.offsetLeft == iTarget) {
+        clearInterval(timer1);
+      }
+      else{
+        dish.style.left = dish.offsetLeft + speed + 'px' ;
+      }
+
+     },0);
+}
+/*
+2
+ */
+ str.onmouseover = function(){
+    shopMove(0);
+  }
+  str.onmouseout = function(){
+    shopMove(-600);
+  }
+
+  r1c2.onmouseover = function(){
+    shopMove(0);
+  }
+  r1c2.onmouseout = function(){
+    shopMove(-600);
+  }
+
+  var timer2 = null;
+  function shopMove(iTarget){
+    clearInterval(timer2);
+     timer2 = setInterval(function(){
+      var speed = 0;
+      if(shop.offsetLeft > iTarget){
+        speed = -10;
+      }
+      else{
+        speed = 10 ;
+      }
+      if (shop.offsetLeft == iTarget) {
+        clearInterval(timer2);
+      }
+      else{
+        shop.style.left = shop.offsetLeft + speed + 'px' ;
+      }
+
+     },0);
+}
+/*
+3
+ */
+ ttr.onmouseover = function(){
+    tacMove(0);
+  }
+  ttr.onmouseout = function(){
+    tacMove(-600);
+  }
+
+  r1c3.onmouseover = function(){
+    tacMove(0);
+  }
+  r1c3.onmouseout = function(){
+    tacMove(-600);
+  }
+
+  var timer3 = null;
+  function tacMove(iTarget){
+    clearInterval(timer3);
+     timer3 = setInterval(function(){
+      var speed = 0;
+      if(tac.offsetLeft > iTarget){
+        speed = -10;
+      }
+      else{
+        speed = 10 ;
+      }
+      if (tac.offsetLeft == iTarget) {
+        clearInterval(timer3);
+      }
+      else{
+        tac.style.left = tac.offsetLeft + speed + 'px' ;
+      }
+
+     },0);
+}
+/*
+4
+ */
+ edtr.onmouseover = function(){
+    eatMove(0);
+  }
+  edtr.onmouseout = function(){
+    eatMove(-600);
+  }
+
+  r2c1.onmouseover = function(){
+    eatMove(0);
+  }
+  r2c1.onmouseout = function(){
+    eatMove(-600);
+  }
+
+  var timer4= null;
+  function eatMove(iTarget){
+    clearInterval(timer4);
+     timer4 = setInterval(function(){
+      var speed = 0;
+      if(eat.offsetLeft > iTarget){
+        speed = -10;
+      }
+      else{
+        speed = 10 ;
+      }
+      if (eat.offsetLeft == iTarget) {
+        clearInterval(timer4);
+      }
+      else{
+        eat.style.left = eat.offsetLeft + speed + 'px' ;
+      }
+
+     },0);
+}
+/*
+5
+ */
+ ctr.onmouseover = function(){
+    cutMove(0);
+  }
+  ctr.onmouseout = function(){
+    cutMove(-600);
+  }
+
+  r2c2.onmouseover = function(){
+    cutMove(0);
+  }
+  r2c2.onmouseout = function(){
+    cutMove(-600);
+  }
+
+  var timer5 = null;
+  function cutMove(iTarget){
+    clearInterval(timer5);
+     timer5 = setInterval(function(){
+      var speed = 0;
+      if(cut.offsetLeft > iTarget){
+        speed = -10;
+      }
+      else{
+        speed = 10 ;
+      }
+      if (cut.offsetLeft == iTarget) {
+        clearInterval(timer5);
+      }
+      else{
+        cut.style.left = cut.offsetLeft + speed + 'px' ;
+      }
+
+     },0);
+}
+/*
+6
+ */
+ eddtr.onmouseover = function(){
+    denMove(0);
+  }
+  eddtr.onmouseout = function(){
+    denMove(-600);
+  }
+
+  r2c3.onmouseover = function(){
+    denMove(0);
+  }
+  r2c3.onmouseout = function(){
+    denMove(-600);
+  }
+
+  var timer6= null;
+  function denMove(iTarget){
+    clearInterval(timer6);
+     timer6 = setInterval(function(){
+      var speed = 0;
+      if(den.offsetLeft > iTarget){
+        speed = -10;
+      }
+      else{
+        speed = 10 ;
+      }
+      if (den.offsetLeft == iTarget) {
+        clearInterval(timer6);
+      }
+      else{
+        den.style.left = den.offsetLeft + speed + 'px' ;
+      }
+
+     },0);
+}
+/*
+
+ */
+
+
+}
+
+
+</script>
+</head>
+<body>
+	<div id="header">
+		<div id="leftbox">
+	<ul>
+		<li>
+			<a href="#" id="dish_trigger">
+				<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/main_nav/dive.png" alt="潜水鱼屋">
+			</a>
+        </li>
+        
+        <li class="divider">
+        	<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/nav_divider.jpg" alt="Divider">
+       </li> 
+
+      <li>
+      	<a href="#"  id="eat_drink_trigger">
+      		<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/main_nav/eat_drink.jpg" alt="Eat Drink">
+      	</a>	
+      </li>
+
+      <li class="divider">
+      	<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/nav_divider.jpg" alt="Divider">
+      </li>	
+
+      <li>
+      	<a href="#" id="cut_trigger">
+      		<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/main_nav/cut.jpg" alt="Cut">
+      	</a>	
+      </li>
+
+      <li class="divider">
+      	<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/nav_divider.jpg" alt="Divider">
+      </li>	
+
+      <li>
+      	<a href="#" id="eat_drink_denver_trigger">
+      		<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/main_nav/eat_drink_denver.jpg" alt="Eat Drink Denver">
+      	</a>	
+      </li>
+
+      <li class="divider">
+      	<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/nav_divider.jpg" alt="Divider">
+      </li>	
+
+      <li>
+      	<a href="#" target="_blank" id="tacorico_trigger">
+      		<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/main_nav/tacorico.jpg" alt="Tacorico">
+      	</a>	
+      </li>
+
+      <li class="divider">
+      	<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/nav_divider.jpg" alt="Divider">
+      </li>	
+
+      <li>
+      	<a href="#" id ="shop_trigger">
+      		<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/main_nav/shop.jpg" alt="Shop">
+      	</a>	
+      </li>
+	
+	</ul>
+</div>
+<div id="landing-footer">
+	<a href="http://eatdrinkinc.com/" title="Eat Drink Inc" rel="home">EAT DRINK INC</a>
+	|
+	<a href="http://970design.com/" title="We Heart Design">DESIGN BY 970</a>
+</div>
+
+</div>
+
+<section id="section-home">
+<div id="inner" style="height:635px;">
+	<div class="row" style="height: 317.5px;">
+		<div class="image-wrap" id="r1c1" style="max-height: 317.5px;">
+			<a href="#" target="blank">
+			 <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/oysters.png" alt="Dive Fish House" class="tile" style="margin-top: -371.5px;"> 
+		    
+		    <div class="slidehover" id="dish" style="left: -600px;">
+		    	<img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/hover_dive.png" alt="Dive Fish House"></div>
+	        </a>
+		</div>
+
+		<div class="image-wrap" id="r1c2" style="max-height: 317.5px;">
+			<a href="#" target="blank">
+			 <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/muse.jpg" alt="Eat Drink Shop" class="tile" style="margin-top: -371.5px;">
+		    
+		    <div class="slidehover" id="shop" style="left: -600px;">
+		    	 <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/hover_shop.png" alt="Eat Drink Shop" class="shop_logo">
+		</div>
+	        </a>
+		</div>
+
+		<div class="image-wrap" id="r1c3" style="max-height: 317.5px;">
+			<a href="#" target="blank">
+			  <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/dio-de-los-muertos.jpg" alt="Tacorico" class="tile" style="margin-top: -371.5px;">
+		    
+        <div class="slidehover" id ="tacorico" style="left: -600px;">
+		    <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/hover_tacorico.png" alt="Tacorico" class="tacorico">
+		</div>
+	        </a>
+		</div>
+	
+	</div>
+	
+
+	<div class="row" style="height: 317.5px;">
+
+		<div class="image-wrap" id="r2c1" style="max-height: 317.5px;">
+			<a href="#" target="blank">
+			  <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/dish_home.jpg" alt="Eat Drink" class="tile" style="margin-top: -371.5px;">
+		    
+		    <div class="slidehover" id="eat_drink" style="left:-600px";>
+		    <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/hover_eatdrink.png" alt="Eat Drink" class="eatdrink">
+		</div>
+	        </a>
+		</div>
+
+		<div class="image-wrap" id="r2c2" style="max-height: 317.5px;">
+			<a href="#" target="blank">
+			  <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/cut_home.jpg" alt="Cut" class="tile" style="margin-top: -371.5px;">
+		    
+		    <div class="slidehover" id="cut" style="left: -600px;">
+		   <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/hover_cut.png" alt="Cut" class="cut_logo">
+		</div>
+	        </a>
+		</div>
+
+		<div class="image-wrap" id="r2c3" style="max-height: 317.5px;">
+			<a href="#" target="blank">
+			  <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/denver_hp.jpg" alt="Eat Drink Denver" class="tile" style="margin-top: -371.5px;">
+		    
+		    <div class="slidehover" id="eatdrink_den" style="left: -600px;">
+		  <img src="http://eatdrinkinc.com/wp-content/themes/eddiemachado-bones-7ed86d5/library/images/homeslides/hover_eatdrinkden.png" alt="Eat Drink Denver" class="eatdrinkden">
+		</div>
+	        </a>
+		</div>
+
+	</div>
+</div>
+</section>
+</body>
+</html>

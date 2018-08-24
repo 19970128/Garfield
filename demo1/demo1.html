@@ -8,8 +8,9 @@
         <title>Title Page</title>
 
         <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--demo1-->
+        <link rel="stylesheet" href="demo1.css">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -18,9 +19,8 @@
         <![endif]-->
     </head>
     <body>
-        <h1 class="text-center">Hello World</h1>
          
-         <nav class="navbar navbar-default" role="navigation">
+         <nav class=" navbar-default" role="navigation" style="background:#242424;">
              <!-- Brand and toggle get grouped for better mobile display -->
              <div class="navbar-header">
                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -29,20 +29,20 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                  </button>
-                 <a class="navbar-brand" href="#">Title</a>
+                 <a  href="#" class="navbar-brand">Title</a>
              </div>
          
              <!-- Collect the nav links, forms, and other content for toggling -->
              <div class="collapse navbar-collapse navbar-ex1-collapse">
                  <ul class="nav navbar-nav">
-                     <li class="active"><a href="#">Link</a></li>
+                     <li><a href="#">Link</a></li>
                      <li><a href="#">Link</a></li>
                  </ul>
-                 <form class="navbar-form navbar-left" role="search">
+                 <form class="navbar-form navbar-right" role="search">
                      <div class="form-group">
                          <input type="text" class="form-control" placeholder="Search">
                      </div>
-                     <button type="submit" class="btn btn-default">Submit</button>
+                     <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-ok"></span> Ok</button>
                  </form>
                  <ul class="nav navbar-nav navbar-right">
                      <li><a href="#">Link</a></li>
@@ -59,9 +59,15 @@
              </div><!-- /.navbar-collapse -->
          </nav>
          
+         <canvas id="c">
+         </canvas>
+        
+    
+         <!--canvas-->
+         <script src="canvasDemo1.js"></script>
         <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <!-- Bootstrap JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
